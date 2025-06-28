@@ -111,20 +111,20 @@
 
     <div class="section">
       <h2>Overview</h2>
-      <p>CleanSweep Mail is a Chrome extension crafted by a solo developer to help you manage your Gmail inbox effortlessly. With one click, you can move emails from the Promotions, Social, and Spam categories to Trash, keeping your inbox clean and organized.</p>
+      <p>CleanSweep Mail is a Chrome extension crafted by a solo developer to help you manage your Gmail inbox effortlessly. With one click, you can permanently delete emails from the Promotions, Social, and Spam categories, keeping your inbox clean and organized.</p>
       <p><strong>Version</strong>: 1.0.6<br>
          <strong>Last Updated</strong>: June 28, 2025<br>
-         <strong>Developer</strong>: Prakash Sanjhai<br>
+         <strong>Developer</strong>: Sanjhai Prakash<br>
          <strong>Contact</strong>: <a href="mailto:sanjhaiprakash18@gmail.com">sanjhaiprakash18@gmail.com</a></p>
     </div>
 
     <div class="section">
       <h2>Features</h2>
       <ul>
-        <li><strong>One-Click Cleaning</strong>: Move emails from Promotions, Social, and Spam to Trash with a single button.</li>
+        <li><strong>One-Click Cleaning</strong>: Permanently delete emails from Promotions, Social, and Spam with a single button.</li>
         <li><strong>Google Sign-In</strong>: Securely authenticate with your Google account to manage your Gmail.</li>
         <li><strong>Real-Time Email Counts</strong>: See the number of emails in Promotions, Social, and Spam categories.</li>
-        <li><strong>Dual Interface</strong>: Use the popup or a sidebar within Gmail for easy access.</li>
+        <li><strong>User-Friendly Interface</strong>: Access CleanSweep Mail via a popup from the Chrome toolbar.</li>
         <li><strong>Dark Mode</strong>: Toggle between light and dark themes for a comfortable experience.</li>
         <li><strong>Progress Tracking</strong>: Monitor email deletion with a progress bar and status updates.</li>
         <li><strong>Secure Authentication</strong>: Built with Google's OAuth 2.0 for safe Gmail access.</li>
@@ -144,32 +144,27 @@
       <ol>
         <li><strong>Sign In</strong>:
           <ul>
-            <li>Click the CleanSweep Mail icon in the toolbar for the popup, or use the sidebar toggle in Gmail.</li>
+            <li>Click the CleanSweep Mail icon in the Chrome toolbar to open the popup.</li>
             <li>Click <strong>Sign in with Google</strong> and follow the prompts to authenticate.</li>
             <li>Grant the required permissions to access your Gmail account.</li>
           </ul>
         </li>
         <li><strong>View Email Counts</strong>:
           <ul>
-            <li>After signing in, see the email counts for Promotions, Social, and Spam.</li>
+            <li>After signing in, the popup displays email counts for Promotions, Social, and Spam.</li>
             <li>Click <strong>Refresh</strong> to update counts manually.</li>
           </ul>
         </li>
         <li><strong>Clean Your Inbox</strong>:
           <ul>
-            <li>Click <strong>Clean Inbox</strong> to start deleting emails.</li>
-            <li>Confirm the deletion in the dialog showing the total emails to be moved.</li>
+            <li>Click <strong>Clean Inbox</strong> to start permanently deleting emails.</li>
+            <li>Confirm the deletion in the dialog showing the total emails to be deleted.</li>
             <li>Track progress via the progress bar and status messages.</li>
           </ul>
         </li>
         <li><strong>Sign Out</strong>:
           <ul>
-            <li>Click <strong>Sign Out</strong> in the popup or sidebar to log out.</li>
-          </ul>
-        </li>
-        <li><strong>Toggle Sidebar</strong>:
-          <ul>
-            <li>In Gmail, click the circular toggle button (top-right) to show/hide the sidebar.</li>
+            <li>Click <strong>Sign Out</strong> in the popup to log out.</li>
           </ul>
         </li>
       </ol>
@@ -181,13 +176,14 @@
       <ul>
         <li><strong>Identity</strong>: For secure Google authentication via OAuth 2.0.</li>
         <li><strong>Storage</strong>: To save authentication tokens and preferences (e.g., theme).</li>
-        <li><strong>ActiveTab</strong>: To interact with Gmail and display the sidebar.</li>
+        <li><strong>ActiveTab</strong>: To interact with the Gmail tab.</li>
         <li><strong>Host Permissions</strong> (<code>https://mail.google.com/*</code>, <code>https://www.googleapis.com/*</code>): To access Gmail and Google APIs.</li>
         <li><strong>Gmail Scopes</strong>:
           <ul>
-            <li><code>gmail.modify</code>: To move emails to Trash.</li>
+            <li><code>gmail.modify</code>: To delete emails permanently.</li>
             <li><code>gmail.readonly</code>: To fetch email counts.</li>
             <li><code>userinfo.profile</code> and <code>userinfo.email</code>: To show your profile picture, name, and email.</li>
+            <li><code>gmail.compose</code>: Included for potential future features (not currently used).</li>
           </ul>
         </li>
       </ul>
@@ -222,15 +218,9 @@
             <li><strong>Cause</strong>: Gmail API rate limits or high email volume.</li>
           </ul>
         </li>
-        <li><strong>Sidebar Missing in Gmail</strong>:
-          <ul>
-            <li><strong>Fix</strong>: Ensure you're on <code>https://mail.google.com</code>. Reload or restart Chrome.</li>
-            <li><strong>Cause</strong>: Content script loading issue.</li>
-          </ul>
-        </li>
         <li><strong>Dark Mode Issues</strong>:
           <ul>
-            <li><strong>Fix</strong>: Toggle the dark mode switch. Clear browser cache if needed.</li>
+            <li><strong>Fix</strong>: Toggle the dark mode switch in the popup. Clear browser cache if needed.</li>
             <li><strong>Cause</strong>: Extension conflicts or cached settings.</li>
           </ul>
         </li>
@@ -248,13 +238,13 @@
       <h2>Frequently Asked Questions (FAQs)</h2>
       <ol>
         <li><strong>Does CleanSweep Mail permanently delete emails?</strong>
-          <p>No, emails are moved to the Trash folder, where they stay for 30 days before Gmail deletes them. You can recover them manually.</p>
+          <p>Yes, emails in Promotions, Social, and Spam are permanently deleted and cannot be recovered.</p>
         </li>
         <li><strong>Is my data secure?</strong>
           <p>Yes, CleanSweep Mail uses Google's OAuth 2.0. Data is only used for functionality and not stored or shared.</p>
         </li>
         <li><strong>Can I clean specific categories?</strong>
-          <p>Not yet—CleanSweep Mail clears Promotions, Social, and Spam together. Selective cleaning may come in future updates.</p>
+          <p>Not yet—CleanSweep Mail deletes emails from Promotions, Social, and Spam together. Selective deletion may come in future updates.</p>
         </li>
         <li><strong>Why sign in with Google?</strong>
           <p>Google sign-in is needed to access the Gmail API for email counts and deletion.</p>
@@ -286,8 +276,8 @@
       <h2>Changelog</h2>
       <p><strong>Version 1.0.6</strong> (June 28, 2025)</p>
       <ul>
-        <li>Initial release with one-click cleaning for Promotions, Social, and Spam.</li>
-        <li>Added popup and sidebar interfaces.</li>
+        <li>Initial release with one-click permanent deletion for Promotions, Social, and Spam emails.</li>
+        <li>Added popup interface.</li>
         <li>Implemented Google OAuth 2.0 authentication.</li>
         <li>Included dark mode and progress tracking.</li>
       </ul>
